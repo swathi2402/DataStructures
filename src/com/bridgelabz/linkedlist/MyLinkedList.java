@@ -34,7 +34,7 @@ public class MyLinkedList<K> {
 			this.tail = newNode;
 		}
 	}
-	
+
 	public void insert(INode<K> myNode, INode<K> newNode) {
 		INode<K> tempNode = myNode.getNext();
 		myNode.setNext(newNode);
@@ -49,7 +49,7 @@ public class MyLinkedList<K> {
 
 	public INode<K> popLast() {
 		INode<K> tempNode = this.head;
-		while(!tempNode.getNext().equals(this.tail)) {
+		while (!tempNode.getNext().equals(this.tail)) {
 			tempNode = tempNode.getNext();
 		}
 		this.tail = tempNode;
@@ -58,19 +58,29 @@ public class MyLinkedList<K> {
 		return tempNode;
 	}
 
+	public int search(K key) {
+		int count = -1;
+		INode<K> tempNode = this.head;
+		while (tempNode != null && tempNode.getNext() != null) {
+			count += 1 ;
+			if(tempNode.getKey().equals(key)) {
+				return count;			
+			}
+			tempNode = tempNode.getNext();
+		}
+		return count;
+	}
+
 	public void printMyNodes() {
 		StringBuffer printNodes = new StringBuffer("My Nodes: ");
 		INode<K> tempNode = this.head;
 		while (tempNode.getNext() != null) {
 			printNodes.append(tempNode.getKey());
-			if (!tempNode.equals(this.tail)) printNodes.append("->");	
+			if (!tempNode.equals(this.tail))
+				printNodes.append("->");
 			tempNode = tempNode.getNext();
 		}
 		printNodes.append(tempNode.getKey());
 		System.out.println(printNodes);
 	}
-
-
-
-
 }

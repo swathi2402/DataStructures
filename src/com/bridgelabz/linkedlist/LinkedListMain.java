@@ -10,8 +10,7 @@ public class LinkedListMain {
 		myLinkedList.append(thirdNode);
 		myLinkedList.insert(firstNode, secondNode);
 		myLinkedList.printMyNodes();
-		INode<Integer> poppedNode = myLinkedList.popLast();
-		System.out.println(poppedNode.getKey() + " is popped");
-		myLinkedList.printMyNodes();
+		int index = myLinkedList.search(secondNode.getKey());
+		System.out.println("The key value " + secondNode.getKey() + " found at position " + index);
 	}
 }
