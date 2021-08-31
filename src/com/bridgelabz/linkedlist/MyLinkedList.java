@@ -52,7 +52,7 @@ public class MyLinkedList<K> {
 		INode<K> tempNode = this.head;
 		while (tempNode.getNext() != null) {
 			printNodes.append(tempNode.getKey());
-			if (!tempNode.equals(tail)) printNodes.append("->");	
+			if (!tempNode.equals(this.tail)) printNodes.append("->");	
 			tempNode = tempNode.getNext();
 		}
 		printNodes.append(tempNode.getKey());
