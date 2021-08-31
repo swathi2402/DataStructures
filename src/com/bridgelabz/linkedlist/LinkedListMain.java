@@ -10,7 +10,8 @@ public class LinkedListMain {
 		myLinkedList.append(thirdNode);
 		myLinkedList.insert(firstNode, secondNode);
 		myLinkedList.printMyNodes();
-		int index = myLinkedList.search(secondNode.getKey());
-		System.out.println("The key value " + secondNode.getKey() + " found at position " + index);
+		MyNode<Integer> newNode = new MyNode<>(40);
+		myLinkedList.insertAtRandom(secondNode, newNode);
+		myLinkedList.printMyNodes();
 	}
 }
