@@ -83,6 +83,17 @@ public class MyLinkedList<K> {
 			tempNode = tempNode.getNext();
 		}
 	}
+	
+	public void deleteAtRandom(INode<K> keyNode) {
+		INode<K> tempNode = this.head;
+		while (tempNode != null && tempNode.getNext() != null) {
+			if(!tempNode.getKey().equals(keyNode.getKey())) {
+				tempNode = tempNode.getNext();
+			}
+			tempNode.setNext(tempNode.getNext().getNext());
+			break;
+		}
+	}
 
 	public void printMyNodes() {
 		StringBuffer printNodes = new StringBuffer("My Nodes: ");

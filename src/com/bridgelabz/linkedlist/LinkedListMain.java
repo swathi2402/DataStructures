@@ -9,9 +9,10 @@ public class LinkedListMain {
 		myLinkedList.append(firstNode);
 		myLinkedList.append(thirdNode);
 		myLinkedList.insert(firstNode, secondNode);
-		myLinkedList.printMyNodes();
 		MyNode<Integer> newNode = new MyNode<>(40);
 		myLinkedList.insertAtRandom(secondNode, newNode);
+		myLinkedList.printMyNodes();
+		myLinkedList.deleteAtRandom(newNode);
 		myLinkedList.printMyNodes();
 	}
 }
