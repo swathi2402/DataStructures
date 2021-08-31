@@ -2,7 +2,7 @@ package com.bridgelabz.linkedlist;
 
 public class MyNode<K> implements INode<K>{
 	private K key;
-	private INode next;
+	private INode<K> next;
 
 	public MyNode(K key) {
 		super();
@@ -18,11 +18,11 @@ public class MyNode<K> implements INode<K>{
 		this.key = key;
 	}
 
-	public INode getNext() {
+	public INode<K> getNext() {
 		return next;
 	}
 
-	public void setNext(INode next) {
+	public void setNext(INode<K> next) {
 		this.next = next;
 	}
 }
