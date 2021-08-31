@@ -1,7 +1,7 @@
 package com.bridgelabz.linkedlist;
 
 public interface INode<K> {
-	K getKet();
+	K getKey();
 	void setKey(K key);
 	
 	INode<K> getNext();
