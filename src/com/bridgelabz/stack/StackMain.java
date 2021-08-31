@@ -15,5 +15,7 @@ public class StackMain {
 		myStack.printStack();
 		INode<Integer> peekValue = myStack.peek();
 		System.out.println("Peek value is: " + peekValue.getKey());
+		myStack.pop();
+		
 	}
 }
