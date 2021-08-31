@@ -94,6 +94,16 @@ public class MyLinkedList<K> {
 			break;
 		}
 	}
+	
+	public int size() {
+		int count = 0;
+		INode<K> tempNode = this.head;
+		while (tempNode != null) {
+			count++;
+			tempNode = tempNode.getNext();
+		}
+		return count;
+	}
 
 	public void printMyNodes() {
 		StringBuffer printNodes = new StringBuffer("My Nodes: ");

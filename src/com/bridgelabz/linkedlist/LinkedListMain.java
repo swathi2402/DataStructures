@@ -14,5 +14,7 @@ public class LinkedListMain {
 		myLinkedList.printMyNodes();
 		myLinkedList.deleteAtRandom(newNode);
 		myLinkedList.printMyNodes();
+		int listSize = myLinkedList.size();
+		System.out.println("Size of the linked list is " + listSize);
 	}
 }
