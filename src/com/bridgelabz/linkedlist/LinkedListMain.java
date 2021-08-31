@@ -10,5 +10,8 @@ public class LinkedListMain {
 		myLinkedList.append(thirdNode);
 		myLinkedList.insert(firstNode, secondNode);
 		myLinkedList.printMyNodes();
+		INode<Integer> poppedNode = myLinkedList.pop();
+		System.out.println(poppedNode.getKey() + " is popped");
+		myLinkedList.printMyNodes();
 	}
 }
