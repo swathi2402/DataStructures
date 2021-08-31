@@ -9,5 +9,6 @@ public class LinkedListMain {
 		myLinkedList.add(firstNode);
 		myLinkedList.add(secondNode);
 		myLinkedList.add(thirdNode);
+		myLinkedList.printMyNodes();
 	}
 }
