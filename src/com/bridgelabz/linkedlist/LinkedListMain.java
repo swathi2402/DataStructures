@@ -7,5 +7,6 @@ public class LinkedListMain {
 		MyNode<Integer> thirdNode = new MyNode<>(70);
 		firstNode.setNext(secondNode);
 		secondNode.setNext(thirdNode);
+		System.out.println(firstNode.getKey() + " " + secondNode.getKey() + " " + thirdNode.getKey());
 	}
 }
