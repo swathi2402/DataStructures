@@ -1,8 +1,8 @@
 package com.bridgelabz.linkedlist;
 
 public class MyLinkedList<K> {
-	private INode<K> head;
-	private INode<K> tail;
+	public INode<K> head;
+	public INode<K> tail;
 
 	public MyLinkedList() {
 		super();

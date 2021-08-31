@@ -1,5 +1,6 @@
 package com.bridgelabz.stack;
 
+import com.bridgelabz.linkedlist.INode;
 import com.bridgelabz.linkedlist.MyNode;
 
 public class StackMain {
@@ -12,5 +13,7 @@ public class StackMain {
 		myStack.push(secondNode);
 		myStack.push(thirdNode);
 		myStack.printStack();
+		INode<Integer> peekValue = myStack.peek();
+		System.out.println("Peek value is: " + peekValue.getKey());
 	}
 }
