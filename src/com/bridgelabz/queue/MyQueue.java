@@ -2,7 +2,6 @@ package com.bridgelabz.queue;
 
 import com.bridgelabz.linkedlist.INode;
 import com.bridgelabz.linkedlist.MyLinkedList;
-import com.bridgelabz.linkedlist.MyNode;
 
 public class MyQueue<T> {
 	private final MyLinkedList<T> myLinkedList;
@@ -17,6 +16,10 @@ public class MyQueue<T> {
 	
 	public void printQueue() {
 		myLinkedList.printMyNodes();
+	}
+
+	public INode<T> dequeue() {
+		return myLinkedList.pop();
 	}
 }
 

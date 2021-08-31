@@ -1,5 +1,6 @@
 package com.bridgelabz.queue;
 
+import com.bridgelabz.linkedlist.INode;
 import com.bridgelabz.linkedlist.MyNode;
 
 public class QueueMain {
@@ -12,5 +13,7 @@ public class QueueMain {
 		myQueue.enqueue(secondNode);
 		myQueue.enqueue(thirdNode);
 		myQueue.printQueue();
+		INode<Integer> dequeueNode = myQueue.dequeue();
+		System.out.println("Dequeued value is: " + dequeueNode.getKey());
 	}
 }
