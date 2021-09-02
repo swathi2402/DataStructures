@@ -58,17 +58,15 @@ public class MyLinkedList<K> {
 		return tempNode;
 	}
 
-	public int search(K key) {
-		int count = -1;
+	public INode<K> search(K key) {
 		INode<K> tempNode = this.head;
 		while (tempNode != null && tempNode.getNext() != null) {
-			count += 1;
 			if (tempNode.getKey().equals(key)) {
-				return count;
+				return tempNode;
 			}
 			tempNode = tempNode.getNext();
 		}
-		return count;
+		return null;
 	}
 
 	public void insertAtRandom(INode<K> keyNode, INode<K> newNode) {
