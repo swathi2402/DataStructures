@@ -61,10 +61,14 @@ public class MyLinkedList<K> {
 	public INode<K> search(K key) {
 		INode<K> tempNode = this.head;
 		while (tempNode != null && tempNode.getNext() != null) {
+			System.out.println(tempNode.getKey().equals(key) + " " + key);
 			if (tempNode.getKey().equals(key)) {
 				return tempNode;
 			}
 			tempNode = tempNode.getNext();
+		}
+		if (tempNode != null && tempNode.getNext() == null) {			
+			return tempNode;
 		}
 		return null;
 	}
@@ -90,6 +94,9 @@ public class MyLinkedList<K> {
 			}
 			tempNode.setNext(tempNode.getNext().getNext());
 			break;
+		}
+		if (tempNode != null && tempNode.getNext() == null) {
+			tempNode = tempNode.getNext();
 		}
 	}
 
