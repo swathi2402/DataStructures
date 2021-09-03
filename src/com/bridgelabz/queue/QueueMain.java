@@ -8,12 +8,12 @@ public class QueueMain {
 		MyNode<Integer> firstNode = new MyNode<>(56);
 		MyNode<Integer> secondNode = new MyNode<>(30);
 		MyNode<Integer> thirdNode = new MyNode<>(70);
-		MyQueue<Integer> myQueue = new MyQueue<Integer>();
-		myQueue.enqueue(firstNode);
-		myQueue.enqueue(secondNode);
-		myQueue.enqueue(thirdNode);
-		myQueue.printQueue();
-		INode<Integer> dequeueNode = myQueue.dequeue();
+		MyDeque<Integer> myDeque = new MyDeque<Integer>();
+		myDeque.addRear(firstNode);
+		myDeque.addRear(secondNode);
+		myDeque.addFront(thirdNode);
+		myDeque.printDueue();
+		INode<Integer> dequeueNode = myDeque.removeRear();
 		System.out.println("Dequeued value is: " + dequeueNode.getKey());
 	}
 }
