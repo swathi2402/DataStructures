@@ -49,12 +49,14 @@ public class MyLinkedList<K> {
 
 	public INode<K> popLast() {
 		INode<K> tempNode = this.head;
-		while (!tempNode.getNext().equals(this.tail)) {
+		while (tempNode.getNext() != null && !tempNode.getNext().equals(this.tail)) {
 			tempNode = tempNode.getNext();
 		}
-		this.tail = tempNode;
-		tempNode = tempNode.getNext();
-		this.tail.setNext(null);
+		if (tempNode != null && this.tail.getKey() != tempNode.getKey()) {			
+			this.tail = tempNode;
+			tempNode = tempNode.getNext();
+			this.tail.setNext(null);
+		}
 		return tempNode;
 	}
 
