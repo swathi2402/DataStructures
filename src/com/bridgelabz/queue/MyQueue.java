@@ -14,12 +14,19 @@ public class MyQueue<T> {
 		myLinkedList.append(newNode);
 	}
 	
+	public INode<T> dequeue() {
+		if(isEmpty()) {
+			return null;
+		}
+		return myLinkedList.pop();
+	}
+	
 	public void printQueue() {
 		myLinkedList.printMyNodes();
 	}
 
-	public INode<T> dequeue() {
-		return myLinkedList.pop();
+	public boolean isEmpty() {
+		return (myLinkedList.head == null);
 	}
 }
 
