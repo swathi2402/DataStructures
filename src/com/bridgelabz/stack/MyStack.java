@@ -26,9 +26,10 @@ public class MyStack<K> {
 		return (myLinkedList.head == null);
 	}
 
-	public void pop() {
-		if(!isEmpty()) {
-			myLinkedList.pop();
+	public INode<K> pop() {
+		if(isEmpty()) {
+			return null;
 		}
+		return myLinkedList.pop();
 	}
 }
