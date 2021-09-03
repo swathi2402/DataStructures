@@ -61,13 +61,12 @@ public class MyLinkedList<K> {
 	public INode<K> search(K key) {
 		INode<K> tempNode = this.head;
 		while (tempNode != null && tempNode.getNext() != null) {
-			System.out.println(tempNode.getKey().equals(key) + " " + key);
 			if (tempNode.getKey().equals(key)) {
 				return tempNode;
 			}
 			tempNode = tempNode.getNext();
 		}
-		if (tempNode != null && tempNode.getNext() == null) {			
+		if (tempNode != null && tempNode.getNext() == null && tempNode.getKey().equals(key)) {
 			return tempNode;
 		}
 		return null;
@@ -86,18 +85,24 @@ public class MyLinkedList<K> {
 		}
 	}
 
-	public void deleteAtRandom(INode<K> keyNode) {
-		INode<K> tempNode = this.head;
-		while (tempNode != null && tempNode.getNext() != null) {
-			if (!tempNode.getKey().equals(keyNode.getKey())) {
+	public INode<K> deleteAtRandom(INode<K> keyNode) {
+
+		INode<K> tempNode = search(keyNode.getKey());
+
+		if (tempNode == head) {
+			tempNode = pop();
+		} else if (tempNode == tail) {
+			tempNode = popLast();
+		} else {
+			INode<K> previousNode = head;
+			
+			while (previousNode.getNext() != tempNode) {
 				tempNode = tempNode.getNext();
 			}
-			tempNode.setNext(tempNode.getNext().getNext());
-			break;
+
+			previousNode.setNext(tempNode.getNext());
 		}
-		if (tempNode != null && tempNode.getNext() == null) {
-			tempNode = tempNode.getNext();
-		}
+		return tempNode;
 	}
 
 	public void orderedListAdd(INode<K> newNode) {
