@@ -22,12 +22,12 @@ public class MyStack<K> {
 		return myLinkedList.head;
 	}
 
+	public boolean isEmpty() {
+		return (myLinkedList.head == null);
+	}
+
 	public void pop() {
-		while (myLinkedList.head != myLinkedList.tail) {
-			myLinkedList.popLast();
-			myLinkedList.printMyNodes();
-		}
-		if(myLinkedList.head == myLinkedList.tail) {
+		if(!isEmpty()) {
 			myLinkedList.pop();
 		}
 	}
