@@ -32,4 +32,9 @@ public class MyStack<K> {
 		}
 		return myLinkedList.pop();
 	}
+	
+	public int size() {
+		return myLinkedList.size();
+	}
+	
 }

@@ -28,5 +28,9 @@ public class MyQueue<T> {
 	public boolean isEmpty() {
 		return (myLinkedList.head == null);
 	}
+	
+	public int size() {
+		return myLinkedList.size();
+	}
 }
 
