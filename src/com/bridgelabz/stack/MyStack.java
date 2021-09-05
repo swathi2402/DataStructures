@@ -33,13 +33,6 @@ public class MyStack<K> {
 		return myLinkedList.pop();
 	}
 	
-	public INode<K> detele(INode<K> newNode) {
-		if(isEmpty()) {
-			return null;
-		}
-		return myLinkedList.deleteAtRandom(newNode);
-	}
-	
 	public int size() {
 		return myLinkedList.size();
 	}

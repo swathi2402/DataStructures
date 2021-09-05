@@ -21,13 +21,6 @@ public class MyQueue<T> {
 		return myLinkedList.pop();
 	}
 	
-	public INode<T> detele(INode<T> newNode) {
-		if(isEmpty()) {
-			return null;
-		}
-		return myLinkedList.deleteAtRandom(newNode);
-	}
-	
 	public void printQueue() {
 		myLinkedList.printMyNodes();
 	}
